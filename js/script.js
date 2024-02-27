@@ -14,7 +14,17 @@ let itemNum = 0;
 
 while (itemNum < shopList.length) {
   document.getElementById("shop-list").innerHTML += `
-  <li class="my-2">${shopList[itemNum]}</li>
+  <div class="form-check">
+        <input
+          class="form-check-input my_form_check"
+          type="checkbox"
+          value=""
+          id="item${itemNum}"
+        />
+        <label class="form-check-label" for="item${itemNum}">
+        ${shopList[itemNum]}
+        </label>
+      </div>
   `;
   itemNum++;
 }
